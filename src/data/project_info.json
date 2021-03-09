@@ -1,0 +1,96 @@
+[
+    {
+        "techLabel": "Ruby",
+        "details": [
+            {
+                "id": 0,
+                "title": "KeyLord",
+                "description": "My first project written with Ruby. The project is a speed typing test.",
+                "tech": ["Ruby", "Git"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/KeyLord"
+                }
+            }
+        ]
+    },
+    {
+        "techLabel": "React",
+        "details": [
+            {
+                "id": 0,
+                "title": "Headspace Clone",
+                "description": "A meditation site built with the MERN stack. Built with 2 other developers",
+                "tech": ["MongoDB", "React", "Redux", "Express", "Node", "Authentication", "Stripe payments", "Jest for testing", "Git"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/studious-fortnight",
+                    "site": "https://meditation-chill.herokuapp.com/"
+                }
+            },
+            {
+                "id": 1,
+                "title": "Music Player",
+                "description": "A Music Player that receives an audio object from an API call.",
+                "tech": ["React", "SCSS", "fontawesome"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/MusicPlayer",
+                    "site": "https://musicplayer-cc.netlify.app/"
+                }
+            }
+        ]
+    },
+    {
+        "techLabel": "Rails",
+        "details": [
+            {
+                "id": 0,
+                "title": "Tat2 Marketplace",
+                "description": "A 2 way marketplace built with Ruby on Rails.",
+                "tech": ["Authentication", "Validation", "Stripe payments", "PostgreSQL", "SCSS", "Git"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/T2A2-Rails-Marketplace",
+                    "site": "https://tat2-market.herokuapp.com/"
+                }
+            },
+            {
+                "id": 1,
+                "title": "DONT LEAVE THIS IN test of 2nd object",
+                "description": "descrip[tion of 2nd object",
+                "tech": ["Authentication", "Validation", "Stripe payments", "PostgreSQL", "SCSS", "Git"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/T2A2-Rails-Marketplace",
+                    "site": "https://tat2-market.herokuapp.com/"
+                }
+            }
+        ]
+    },
+    {
+        "techLabel": "JS",
+        "details": [
+            {
+                "id": 0,
+                "title": "Mew Mew Kitty",
+                "description": "A challenge written to help students cement their knowledge of DOM manipulation, event listeners, and to introduce parseInt. </br> Images created in Figma",
+                "tech": ["JS", "HTML", "CSS", "Figma"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/MewMewKitty",
+                    "site": "https://mewmewkitty.netlify.app/"
+                }
+            }
+        ]
+    },
+    {
+        "techLabel": "HTML & CSS",
+        "details": [
+            {
+                "id": 0,
+                "title": "1st Portfolio",
+                "description": "My OG portfolio after learning a little bit of HTML & CSS.",
+                "tech": ["html", "CSS", "Git"],
+                "links": {
+                    "github": "https://github.com/CoderCarl1/Portfolio",
+                    "site": "https://codercarl1.github.io/Portfolio/"
+                }
+            }
+        ]
+    }
+]
