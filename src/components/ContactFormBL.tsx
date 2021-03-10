@@ -2,12 +2,19 @@ import React, { useState, useRef } from 'react';
 import * as EmailValidator from 'email-validator';
 import ContactForm from './ContactForm';
 
+const encode = (data: any) => {
+    return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&');
+};
+
+interface Form {
+    email: string;
+    subject: string;
+    message: string;
+}
+
 const ContactFormBL: React.FC = () => {
-    interface Form {
-        email: string;
-        subject: string;
-        message: string;
-    }
     const [formValue, setFormValue] = useState<Form>({
         email: '',
         subject: '',
@@ -46,19 +53,25 @@ const ContactFormBL: React.FC = () => {
         }
     };
 
-    const formValidator = (obj: Form) => {
-        EmailValidator.validate(obj.email);
-
-        //subject validation
-        //message validation
-    };
-
-    const handleSubmit = (event: React.FormEvent) => {
+    const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         //replace this next line with the ajax call when able.
-        formValidator(formValue);
+        try {
+            if (EmailValidator.validate(formValue.email)) {
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: encode({ 'form-name': 'contact', ...formValue })
+                })
+                    .then(() => {
+                        setmessageSent(!messageSent);
+                    })
+                    .catch(() => alert('There was an issue with sending the form'));
+            }
+        } catch (err) {}
+
         setFormValue({ email: '', subject: '', message: '' });
-        setmessageSent(!messageSent);
+
         setTimeout(() => {
             setmessageSent(!messageSent);
         }, 5000);
