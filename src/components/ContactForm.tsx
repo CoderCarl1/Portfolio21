@@ -11,7 +11,7 @@ interface Props {
     handleFormChange: () => void;
     formEmail: React.RefObject<HTMLInputElement>;
     formSubject: React.RefObject<HTMLInputElement>;
-    formMessage: React.RefObject<HTMLInputElement>;
+    formMessage: React.RefObject<HTMLTextAreaElement>;
     formValue: Form;
     messageSent: boolean;
     popMessage: () => void;
@@ -37,7 +37,8 @@ const ContactForm: React.FC<Props> = (Props) => {
     };
 
     return (
-        <form className="flex-col" onSubmit={(event) => handleSubmit(event)}>
+        <form name="Contact Form" className="flex-col" data-netlify="true" onSubmit={(event) => handleSubmit(event)}>
+            <input type="hidden" name="form-name" value="Contact Form" />
             <fieldset>
                 <legend>Contact Form</legend>
 
@@ -72,18 +73,17 @@ const ContactForm: React.FC<Props> = (Props) => {
                 </label>
                 <label htmlFor="message">
                     Message
-                    <input
-                        min="1"
+                    <textarea
                         required
-                        pattern="/([ ]*+[0-9A-Za-z]++[ ]*+)+/"
+                        rows={8}
+                        // cols={50}
                         placeholder="     Your message..."
-                        type="text"
                         id="message"
                         name="message"
                         ref={formMessage}
                         value={formValue.message}
                         onChange={() => handleFormChange()}
-                    ></input>
+                    ></textarea>
                 </label>
                 <button type="submit" value="Submit">
                     SUBMIT

@@ -241,11 +241,6 @@
         "signature": "9692a141afe8f30a5542189ffceb1a043f3d1fbaf0e07d28a8e9ac6d32c4cb01",
         "affectsGlobalScope": true
       },
-      "./node_modules/@types/react/jsx-runtime.d.ts": {
-        "version": "af7fd2870746deed40e130fc0a3966de74e8f52a97ec114d0fbb35876ab05ca9",
-        "signature": "af7fd2870746deed40e130fc0a3966de74e8f52a97ec114d0fbb35876ab05ca9",
-        "affectsGlobalScope": false
-      },
       "./node_modules/@types/hoist-non-react-statics/index.d.ts": {
         "version": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
         "signature": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
@@ -257,17 +252,77 @@
         "affectsGlobalScope": true
       },
       "./src/components/Navigation.tsx": {
-        "version": "5243165949920053d4c2ae2579a1a05f0527e600e8aaa5e44973ac637bcc0cc9",
-        "signature": "3b5b8eb9873eb1318da989ad0230fb67fde12e61e59213b9ccf766d9b19818c5",
+        "version": "005b8fa7d28486c54f4786f84219170cb9ac330a65d444ab549a9b20d51e2b04",
+        "signature": "1e314c2592a307a3490b5d2f27ad45d1b428eb9aa1eaa54da11cdcbfb969ce52",
         "affectsGlobalScope": false
       },
       "./src/components/Footer.tsx": {
-        "version": "eb381efed30c8b0a3087980430c6b9dad114adf69958a0d256986f90aa1f9913",
+        "version": "b0709ba9ba664a6918067b0a9ae36e1b20c524bc817bdbea04b05597d4b94665",
         "signature": "bd2c96981366d46ecb917831bc2a480466b27798e62dcd45b7a8979864fe4563",
         "affectsGlobalScope": false
       },
+      "./node_modules/email-validator/index.d.ts": {
+        "version": "45eb6f5a1fd7472133381fe93be8910b4038f76be5d868cb883f93028f6f2583",
+        "signature": "45eb6f5a1fd7472133381fe93be8910b4038f76be5d868cb883f93028f6f2583",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ContactForm.tsx": {
+        "version": "005067dbceda5465b153e7428d3e129f04cf5c606cef2d5569e337387eef5f63",
+        "signature": "79cb94c168711224db534e3c68e7cc785517f74a56f1cc36a32c667e9bc133e6",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ContactFormBL.tsx": {
+        "version": "0b93b95d31036bba6659e4c41a274d94b64aa6936623b81a3c163e034c785296",
+        "signature": "fdce9e1de1e7e8ec78dc1cba41fb441cb0a54a170066cb875e5f2314c3cf73d9",
+        "affectsGlobalScope": false
+      },
+      "./src/styles/GlobalStyles.ts": {
+        "version": "68d23ee7e37d0db34ba285f6d8adb9efbe5fbb6c68b868870a5692d2b6c94f1b",
+        "signature": "a79a33d31436f8e579bf2930ef1f08a10f34d0d5f07fafbf14814588255ee34e",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/Contact.tsx": {
+        "version": "5dbf215cb295ca125413610d6f9b97427c81ab120b093b8fc5b83c8416f56204",
+        "signature": "ab6fca61eca59a9bc2e3ba3a21f9aa394cc09256f61c56b9013ce19bb0f244cf",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/About.tsx": {
+        "version": "115d44bde82f2f72ede5fb96f3b5aa13673ef52a8ffe392e8ccf2f49e862c7b9",
+        "signature": "7a16fbd238835b41fb137d697800d7631754007978ecbf3edd917241b43770eb",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ProjectList.tsx": {
+        "version": "5dd3ecb04a8d4a2f24c90a048d72ede91bdcb759b319d7c3d86b4b63cbb247f1",
+        "signature": "63dccf9319e4db9bfde6256ae9b0a7c3e6fa5affd894a662ef7448d1161e0301",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ProjectDetails.tsx": {
+        "version": "fa55a4bd5232b486512836720002107ca9c11fe19288ebb3874278401a00e1ae",
+        "signature": "a6078c3e6f30f6b1fdc6a8cd73a4345a37c39548f160dc7f9a4cb80031128452",
+        "affectsGlobalScope": false
+      },
+      "./src/components/LoadingProject.tsx": {
+        "version": "c479ba5106836c4e29bee13c0b0787639461df21cf77b590dd8caed7dadc2c4d",
+        "signature": "54c00c2495ddfc5194b97cfcdb074c61d6b67d62ab3e2faced9ec7201edcf31f",
+        "affectsGlobalScope": false
+      },
+      "./src/data/project_info.json": {
+        "version": "024f375bb529361d7079ee9874a835a1911cba605a4913c43557a97bddd0d74d",
+        "signature": "6286da8ba53207a35d558d5e79cbe01c65f75c22026a40b0d5a38d4c81a20d0b",
+        "affectsGlobalScope": true
+      },
+      "./src/components/ProjectsBL.tsx": {
+        "version": "a37c8a957add69ce5400d12ff3b0057bd0ad4ebc261c412b618ef85d231c4ca5",
+        "signature": "8e84ed782cd827dd4c1bb06ae07c4022cb8223bc7c5d41cc98af54bcc522d891",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/Projects.tsx": {
+        "version": "5e15cee34da752460b4a5e1c1367f1cef57e628d9f6ab1c27ed61f903c64b7db",
+        "signature": "e3e8738cdff9afe1018c07cd14e37d0400669e9d23701cdbb174514b95fe5e10",
+        "affectsGlobalScope": false
+      },
       "./src/App.tsx": {
-        "version": "cabb50673ae6798b1d0dc27b9e3415e3ea915b1bca0bb7881849e6cbd273a2e0",
+        "version": "b86994317b56f196ce6a08f54508be5bb81cd6ed2d6a9af9c752f4683e1415a8",
         "signature": "5d6f0d27cc0d44dc09272ca7d766cd3b89cc7c6d9be32f92b642cc14edcda36c",
         "affectsGlobalScope": false
       },
@@ -843,32 +898,33 @@
       }
     },
     "options": {
-      "target": 1,
+      "outDir": "./build",
+      "module": 99,
+      "target": 4,
       "lib": [
         "lib.dom.d.ts",
         "lib.dom.iterable.d.ts",
         "lib.esnext.d.ts"
       ],
-      "outDir": "./build",
-      "rootDir": "./src",
       "allowJs": true,
+      "jsx": 2,
+      "moduleResolution": 2,
+      "rootDir": "./src",
       "skipLibCheck": true,
       "esModuleInterop": true,
       "allowSyntheticDefaultImports": true,
       "strict": true,
       "forceConsistentCasingInFileNames": true,
-      "module": 99,
-      "moduleResolution": 2,
       "isolatedModules": true,
       "resolveJsonModule": true,
       "noEmit": true,
-      "jsx": 4,
       "sourceMap": true,
       "declaration": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "incremental": true,
       "noFallthroughCasesInSwitch": true,
+      "project": "./tsconfig.json",
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
@@ -1192,9 +1248,6 @@
         "./node_modules/@types/react/global.d.ts",
         "./node_modules/csstype/index.d.ts"
       ],
-      "./node_modules/@types/react/jsx-runtime.d.ts": [
-        "./node_modules/@types/react/index.d.ts"
-      ],
       "./node_modules/@types/resolve/index.d.ts": [
         "./node_modules/@types/node/index.d.ts"
       ],
@@ -1313,24 +1366,72 @@
       ],
       "./src/App.tsx": [
         "./node_modules/@types/react/index.d.ts",
-        "./node_modules/@types/react/jsx-runtime.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts",
         "./src/components/Footer.tsx",
-        "./src/components/Navigation.tsx"
+        "./src/components/Navigation.tsx",
+        "./src/pages/About.tsx",
+        "./src/pages/Contact.tsx",
+        "./src/pages/Projects.tsx",
+        "./src/styles/GlobalStyles.ts"
+      ],
+      "./src/components/ContactForm.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ContactFormBL.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/email-validator/index.d.ts",
+        "./src/components/ContactForm.tsx"
       ],
       "./src/components/Footer.tsx": [
         "./node_modules/@types/react/index.d.ts",
-        "./node_modules/@types/react/jsx-runtime.d.ts"
+        "./node_modules/@types/styled-components/index.d.ts"
+      ],
+      "./src/components/LoadingProject.tsx": [
+        "./node_modules/@types/react/index.d.ts"
       ],
       "./src/components/Navigation.tsx": [
         "./node_modules/@types/react/index.d.ts",
-        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts"
+      ],
+      "./src/components/ProjectDetails.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts"
+      ],
+      "./src/components/ProjectList.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts"
+      ],
+      "./src/components/ProjectsBL.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/components/LoadingProject.tsx",
+        "./src/components/ProjectDetails.tsx",
+        "./src/components/ProjectList.tsx",
+        "./src/data/project_info.json"
       ],
       "./src/index.tsx": [
         "./node_modules/@types/react-dom/index.d.ts",
         "./node_modules/@types/react/index.d.ts",
-        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./src/App.tsx"
+      ],
+      "./src/pages/About.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts",
+        "./src/styles/GlobalStyles.ts"
+      ],
+      "./src/pages/Contact.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts",
+        "./src/components/ContactFormBL.tsx",
+        "./src/styles/GlobalStyles.ts"
+      ],
+      "./src/pages/Projects.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts",
+        "./src/components/ProjectsBL.tsx",
+        "./src/styles/GlobalStyles.ts"
+      ],
+      "./src/styles/GlobalStyles.ts": [
+        "./node_modules/@types/styled-components/index.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1654,9 +1755,6 @@
         "./node_modules/@types/react/global.d.ts",
         "./node_modules/csstype/index.d.ts"
       ],
-      "./node_modules/@types/react/jsx-runtime.d.ts": [
-        "./node_modules/@types/react/index.d.ts"
-      ],
       "./node_modules/@types/resolve/index.d.ts": [
         "./node_modules/@types/node/index.d.ts"
       ],
@@ -1776,11 +1874,41 @@
       "./src/App.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
+      "./src/components/ContactForm.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ContactFormBL.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
       "./src/components/Footer.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/LoadingProject.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
       "./src/components/Navigation.tsx": [
         "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ProjectDetails.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ProjectList.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ProjectsBL.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/pages/About.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/pages/Contact.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/pages/Projects.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/styles/GlobalStyles.ts": [
+        "./node_modules/@types/styled-components/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1870,7 +1998,6 @@
       "./node_modules/@types/react-router/index.d.ts",
       "./node_modules/@types/react/global.d.ts",
       "./node_modules/@types/react/index.d.ts",
-      "./node_modules/@types/react/jsx-runtime.d.ts",
       "./node_modules/@types/resolve/index.d.ts",
       "./node_modules/@types/source-list-map/index.d.ts",
       "./node_modules/@types/stack-utils/index.d.ts",
@@ -1895,6 +2022,7 @@
       "./node_modules/@types/yargs-parser/index.d.ts",
       "./node_modules/@types/yargs/index.d.ts",
       "./node_modules/csstype/index.d.ts",
+      "./node_modules/email-validator/index.d.ts",
       "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
       "./node_modules/jest-diff/build/diffLines.d.ts",
       "./node_modules/jest-diff/build/index.d.ts",
@@ -1948,10 +2076,21 @@
       "./node_modules/typescript/lib/lib.esnext.string.d.ts",
       "./node_modules/typescript/lib/lib.esnext.weakref.d.ts",
       "./src/App.tsx",
+      "./src/components/ContactForm.tsx",
+      "./src/components/ContactFormBL.tsx",
       "./src/components/Footer.tsx",
+      "./src/components/LoadingProject.tsx",
       "./src/components/Navigation.tsx",
+      "./src/components/ProjectDetails.tsx",
+      "./src/components/ProjectList.tsx",
+      "./src/components/ProjectsBL.tsx",
+      "./src/data/project_info.json",
       "./src/index.tsx",
-      "./src/react-app-env.d.ts"
+      "./src/pages/About.tsx",
+      "./src/pages/Contact.tsx",
+      "./src/pages/Projects.tsx",
+      "./src/react-app-env.d.ts",
+      "./src/styles/GlobalStyles.ts"
     ],
     "affectedFilesPendingEmit": [
       [
@@ -2299,10 +2438,6 @@
         1
       ],
       [
-        "./node_modules/@types/react/jsx-runtime.d.ts",
-        1
-      ],
-      [
         "./node_modules/@types/resolve/index.d.ts",
         1
       ],
@@ -2399,6 +2534,10 @@
         1
       ],
       [
+        "./node_modules/email-validator/index.d.ts",
+        1
+      ],
+      [
         "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
         1
       ],
@@ -2431,55 +2570,7 @@
         1
       ],
       [
-        "./node_modules/typescript/lib/lib.dom.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.dom.iterable.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.collection.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.core.d.ts",
-        1
-      ],
-      [
         "./node_modules/typescript/lib/lib.es2015.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.generator.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.iterable.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.promise.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.proxy.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.reflect.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.symbol.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2016.array.include.d.ts",
         1
       ],
       [
@@ -2491,51 +2582,7 @@
         1
       ],
       [
-        "./node_modules/typescript/lib/lib.es2017.intl.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2017.object.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2017.string.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
-        1
-      ],
-      [
         "./node_modules/typescript/lib/lib.es2018.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2018.intl.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2018.promise.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2018.regexp.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2019.array.d.ts",
         1
       ],
       [
@@ -2543,47 +2590,7 @@
         1
       ],
       [
-        "./node_modules/typescript/lib/lib.es2019.object.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2019.string.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2019.symbol.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2020.bigint.d.ts",
-        1
-      ],
-      [
         "./node_modules/typescript/lib/lib.es2020.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2020.intl.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2020.promise.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2020.string.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.es5.d.ts",
         1
       ],
       [
@@ -2591,23 +2598,15 @@
         1
       ],
       [
-        "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.esnext.promise.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.esnext.string.d.ts",
-        1
-      ],
-      [
-        "./node_modules/typescript/lib/lib.esnext.weakref.d.ts",
-        1
-      ],
-      [
         "./src/App.tsx",
+        1
+      ],
+      [
+        "./src/components/ContactForm.tsx",
+        1
+      ],
+      [
+        "./src/components/ContactFormBL.tsx",
         1
       ],
       [
@@ -2615,7 +2614,27 @@
         1
       ],
       [
+        "./src/components/LoadingProject.tsx",
+        1
+      ],
+      [
         "./src/components/Navigation.tsx",
+        1
+      ],
+      [
+        "./src/components/ProjectDetails.tsx",
+        1
+      ],
+      [
+        "./src/components/ProjectList.tsx",
+        1
+      ],
+      [
+        "./src/components/ProjectsBL.tsx",
+        1
+      ],
+      [
+        "./src/data/project_info.json",
         1
       ],
       [
@@ -2623,7 +2642,23 @@
         1
       ],
       [
+        "./src/pages/About.tsx",
+        1
+      ],
+      [
+        "./src/pages/Contact.tsx",
+        1
+      ],
+      [
+        "./src/pages/Projects.tsx",
+        1
+      ],
+      [
         "./src/react-app-env.d.ts",
+        1
+      ],
+      [
+        "./src/styles/GlobalStyles.ts",
         1
       ]
     ]

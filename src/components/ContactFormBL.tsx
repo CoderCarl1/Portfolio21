@@ -17,7 +17,7 @@ const ContactFormBL: React.FC = () => {
 
     const formEmail = useRef<HTMLInputElement>(null);
     const formSubject = useRef<HTMLInputElement>(null);
-    const formMessage = useRef<HTMLInputElement>(null);
+    const formMessage = useRef<HTMLTextAreaElement>(null);
 
     const popMessage = () => {
         setmessageSent(false);

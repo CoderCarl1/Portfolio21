@@ -25,7 +25,7 @@ const ProjectsBL: React.FC = () => {
 
     useEffect(() => {
         setProjData([...data]);
-        const projectList: Array<ProjDetails> = data
+        const projectList: Array<ProjDetails> = (data as Array<TechObject>)
             .map((techObj) => {
                 return techObj.details.map((projectObj: ProjDetails) => {
                     return projectObj;
