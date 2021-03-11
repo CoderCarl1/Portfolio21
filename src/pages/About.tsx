@@ -4,22 +4,51 @@ import styled from 'styled-components';
 import { StyledPage } from '../styles/GlobalStyles';
 
 const StyledAbout = styled(StyledPage)`
-    /* background: grey; */
+    justify-content: space-between;
     height: 50vh;
+    color: rgba(255, 255, 255, 0.7);
     h2 {
+        text-align: center;
         font-size: 3.3rem;
-        color: rgba(255, 255, 255, 0.7);
+    }
+    article {
+        margin: 3vw;
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        div {
+            background: rgba(255, 255, 255, 0.515);
+            padding: 0.5rem;
+            border-radius: 15px 0 15px 0;
+        }
+        p {
+            color: black;
+        }
+        p span {
+            font-weight: bold;
+        }
     }
 `;
 
 export const About: React.FC = () => {
     return (
-        <StyledAbout id="about">
+        <StyledAbout id="about" className="flex-col">
             <h2>About</h2>
-            <h3>Dev Skills:</h3>
-            <p>MERN Stack: Express JS, React, MongoDB, Node</p>
-            <p>ROR: Ruby on Rails, Ruby, PostgreSQL</p>
-            <p>Other: HTML, CSS, Git, Figma, SCSS, A11y, Typescript, GraphQL</p>
+            <article>
+                <h3>Dev Skills</h3>
+                <div>
+                    <p>
+                        <span>MERN Stack</span> Express JS, React, MongoDB, Node
+                    </p>
+                    <p>
+                        <span>ROR</span> Ruby on Rails, Ruby, PostgreSQL
+                    </p>
+                    <p>
+                        <span>Other</span> HTML, CSS, Git, Figma, SCSS, A11y, Typescript, GraphQL
+                    </p>
+                </div>
+            </article>
         </StyledAbout>
     );
 };

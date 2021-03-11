@@ -68,7 +68,9 @@ const ContactFormBL: React.FC = () => {
                     })
                     .catch(() => alert('There was an issue with sending the form'));
             }
-        } catch (err) {}
+        } catch (err) {
+            console.log(err);
+        }
 
         setFormValue({ email: '', subject: '', message: '' });
 

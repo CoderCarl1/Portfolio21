@@ -77,7 +77,7 @@ const ContactForm: React.FC<Props> = (Props) => {
                         required
                         rows={8}
                         // cols={50}
-                        placeholder="     Your message..."
+                        placeholder="Your message..."
                         id="message"
                         name="message"
                         ref={formMessage}

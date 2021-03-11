@@ -15,17 +15,28 @@ const Nav = styled.nav`
         flex-direction: column;
     }
     .nav-wrapper {
-        position: absolute;
-        width: 90%;
+        /* position: absolute; */
+        width: 90vw;
+        /* border: 1px solid red; */
         align-items: center;
         justify-content: space-between;
         height: 15vh;
+        margin: 0 auto;
         h1 {
             width: 5rem;
         }
         button {
             width: 4rem;
             height: 2rem;
+        }
+        .logo {
+            position: relative;
+            width: 1.5rem;
+            height: 12.5vh;
+            /* margin: auto; */
+            image {
+                object-fit: contain;
+            }
         }
     }
     .mob_nav_items {
@@ -52,6 +63,28 @@ const Nav = styled.nav`
             }
         }
     }
+    .menu_down {
+        animation: menu_down_animation 0.3s ease-out forwards;
+    }
+    .menu_up {
+        animation: menu_up_animation 0.3s 0.2s ease-in forwards;
+    }
+    @keyframes menu_down_animation {
+        from {
+            transform: translateY(-100vh);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes menu_up_animation {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-100vh);
+        }
+    }
 
     @media (min-width: 768px) {
         .nav-wrapper {
@@ -59,11 +92,7 @@ const Nav = styled.nav`
             width: 100vw;
             height: 15vh;
         }
-        .logo {
-            position: relative;
-            width: 5rem;
-            margin: auto;
-        }
+
         .dt-nav_items {
             display: flex;
             align-items: center;
@@ -101,7 +130,8 @@ export const Navigation: React.FC<Props> = ({ setNavOpen, navOpen }) => {
     return (
         <Nav className="nav">
             <div className="nav-wrapper flex">
-                <h1 className="logo">LOGO</h1>
+                <img src="./logo80.png" alt="Logo" />
+
                 <ul className="dt-nav_items">
                     <li>
                         <a href="#about">About</a>

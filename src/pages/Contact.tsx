@@ -29,6 +29,7 @@ const StyledContact = styled(StyledPage)`
 
             padding-bottom: 4rem;
             border: 4px solid rgba(255, 255, 255, 0.556);
+            border-radius: 10px;
             margin: auto;
         }
         legend {

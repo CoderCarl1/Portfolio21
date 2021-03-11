@@ -16,7 +16,8 @@ const StyledProjects = styled(StyledPage)`
     }
     .wrapper {
         width: 90vw;
-        background: green;
+        background: pink;
+        border: 10px solid pink;
     }
 `;
 
