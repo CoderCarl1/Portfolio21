@@ -55,7 +55,7 @@ const App: React.FC = () => {
         <GlobalStyles>
             <Navigation setNavOpen={setNavOpen} navOpen={navOpen} />
             {!navOpen && (
-                <Main>
+                <Main aria-label="content" aria-labelledby="AboutCarlDavidson">
                     <About />
                     <Projects />
                     <Contact />

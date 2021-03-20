@@ -6,7 +6,8 @@ import { StyledPage } from '../styles/GlobalStyles';
 const StyledAbout = styled(StyledPage)`
     justify-content: space-between;
     height: 50vh;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(255, 255, 255);
+
     h2 {
         text-align: center;
         font-size: 3.3rem;
@@ -29,14 +30,21 @@ const StyledAbout = styled(StyledPage)`
             font-weight: bold;
         }
     }
+        /* h1 {
+            position: absolute;
+            top: 7vh;
+            left: 30%;
+            z-index: 3;
+        } */
+
 `;
 
 export const About: React.FC = () => {
     return (
-        <StyledAbout id="about" className="flex-col">
-            <h2>About</h2>
+        <StyledAbout id="AboutCarlDavidson" className="flex-col">
+            <h1>Carl Davidson</h1>
             <article>
-                <h3>Dev Skills</h3>
+                <h2>Dev Skills</h2>
                 <div>
                     <p>
                         <span>MERN Stack</span> Express JS, React, MongoDB, Node

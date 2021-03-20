@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import { StyledPage } from '../styles/GlobalStyles';
 
 const StyledContact = styled(StyledPage)`
-    /* background: grey; */
     height: 90vh;
-    /* width: 80vw; */
     .invalid {
         border: 1px solid red;
     }
@@ -52,6 +50,14 @@ const StyledContact = styled(StyledPage)`
             height: 2rem;
             display: block;
         }
+        textarea,
+        input {
+            border-radius: 25px;
+            padding-left: 1rem;
+        }
+        textarea {
+            padding-top: 1rem;
+        }
         input[name='message'] {
             min-height: 10vh;
             max-height: 35vh;
@@ -75,18 +81,22 @@ const StyledContact = styled(StyledPage)`
         }
         ul {
             list-style: none;
-            position: relative;
-            /* background: red; */
-            width: 50%;
-            margin: auto;
-            animation: bounce 0.3s ease-in-out alternate infinite;
+            position: absolute;
+            width: 40%;
+            margin: 2.5% 15% 0 15%;
+            animation: fadeIn 0.3s ease-in-out forwards;
+            -webkit-animation: fadeIn 0.3s ease-in-out forwards;
+            -moz-animation: fadeIn 0.3s ease-in-out forwards;
+            -o-animation: fadeIn 0.3s ease-in-out forwards;
+            -ms-animation: fadeIn 0.3s ease-in-out forwards;
             .notice {
                 position: relative;
                 top: 0.5rem;
                 border-radius: 0.5rem;
-                border: 0.5px #00d2c6 ridge;
+
                 box-shadow: -1px -1px 2px 0 rgba(0, 0, 0, 0.3), 2px 2px 2.5px rgba(255, 255, 255, 0.25);
                 text-align: center;
+                font-size: 1.1rem;
                 width: 25ch;
                 height: 2rem;
                 margin: auto;
@@ -94,29 +104,69 @@ const StyledContact = styled(StyledPage)`
             }
             .noticeX {
                 position: absolute;
-                border-radius: 0 0.5rem 0.5rem 0;
                 margin: 0;
-                top: 0px;
-                right: 0px;
-                width: 1.5rem;
+                top: 0;
+                right: -5px;
+                width: 2rem;
                 height: 2rem;
+                background-color: white;
+                box-shadow: -1px -1px 2px 0 rgba(0, 0, 0, 0.3), 2px 2px 2.5px rgba(255, 255, 255, 0.25);
                 border: none;
+                border-radius: 50%;
                 z-index: 2;
-                &:active {
+                &:active,
+                &:hover {
                     /* transform: scale(1.1); */
-                    background: white;
+                    background: #494370;
+                    color: #ffffff;
                     border: 2px solid #008cba;
                 }
                 /* background: red; */
             }
         }
     }
-    @keyframes bounce {
-        from {
-            transform: translatY(0);
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
         }
-        to {
-            transform: translateY(0.05rem);
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
         }
     }
 `;

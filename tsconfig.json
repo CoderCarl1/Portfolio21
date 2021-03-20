@@ -1,39 +1,28 @@
 {
-  "compilerOptions": {
-    "outDir": "./build",
-    "target": "ES2017",
-    "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true,
-    "module": "ESNext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "moduleResolution": "node",
-    "rootDir": "./src",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "sourceMap": true,
-    "declaration": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "incremental": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "./public",
-    "./vscode"
-  ]
+    "compilerOptions": {
+        "outDir": "./build",
+        "target": "ES2017",
+        "jsx": "react-jsx",
+        "allowSyntheticDefaultImports": true,
+        "module": "ESNext",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "moduleResolution": "node",
+        "rootDir": "./src",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "sourceMap": true,
+        "declaration": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "incremental": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "build", "./public", "./vscode"]
 }

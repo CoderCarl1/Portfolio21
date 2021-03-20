@@ -50,16 +50,6 @@
                     "github": "https://github.com/CoderCarl1/T2A2-Rails-Marketplace",
                     "site": "https://tat2-market.herokuapp.com/"
                 }
-            },
-            {
-                "id": 1,
-                "title": "DONT LEAVE THIS IN test of 2nd object",
-                "description": "descrip[tion of 2nd object",
-                "tech": ["Authentication", "Validation", "Stripe payments", "PostgreSQL", "SCSS", "Git"],
-                "links": {
-                    "github": "https://github.com/CoderCarl1/T2A2-Rails-Marketplace",
-                    "site": "https://tat2-market.herokuapp.com/"
-                }
             }
         ]
     },

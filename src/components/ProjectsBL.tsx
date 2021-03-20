@@ -6,6 +6,7 @@ import LoadingProject from './LoadingProject';
 // Data from JSON file
 import data from '../data/project_info.json';
 
+
 interface TechObject {
     techLabel: string;
     details: ProjDetails[];
@@ -21,6 +22,7 @@ interface ProjDetails {
 const ProjectsBL: React.FC = () => {
     const [projData, setProjData] = useState<Array<TechObject>>([]);
     const [projList, setProjList] = useState<Array<ProjDetails>>([]);
+    const [listState, setListState] = useState<boolean>(false);
     const [proj, setProj] = useState<ProjDetails>();
 
     useEffect(() => {
@@ -53,15 +55,16 @@ const ProjectsBL: React.FC = () => {
     if (proj) {
         return (
             <div className="wrapper">
-                <ProjectList handleSetProject={handleSetProject} projData={projData} />
+                <ProjectList listState={listState} setListState={setListState} handleSetProject={handleSetProject} projData={projData} />
                 <ProjectDetails proj={proj!} />
             </div>
         );
     } else {
         return (
             <div className="wrapper">
-                <ProjectList handleSetProject={handleSetProject} projData={projData} />
+                <ProjectList listState={listState} setListState={setListState} handleSetProject={handleSetProject} projData={projData} />
                 <LoadingProject />
+               
             </div>
         );
     }
