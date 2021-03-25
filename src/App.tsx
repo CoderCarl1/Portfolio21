@@ -9,6 +9,8 @@ import { Projects } from './pages/Projects';
 //styles
 import styled from 'styled-components';
 import { GlobalStyles } from './styles/GlobalStyles';
+//state
+import { ViewportProvider } from './ViewPortContext';
 const { useState } = React;
 // type MenuState {
 //     menu: boolean
@@ -53,15 +55,17 @@ const App: React.FC = () => {
 
     return (
         <GlobalStyles>
-            <Navigation setNavOpen={setNavOpen} navOpen={navOpen} />
-            {!navOpen && (
-                <Main aria-label="content" aria-labelledby="AboutCarlDavidson">
-                    <About />
-                    <Projects />
-                    <Contact />
-                    <Footer />
-                </Main>
-            )}
+            <ViewportProvider>
+                <Navigation setNavOpen={setNavOpen} navOpen={navOpen} />
+                {!navOpen && (
+                    <Main aria-label="content" aria-labelledby="AboutCarlDavidson">
+                        <About />
+                        <Projects />
+                        <Contact />
+                        <Footer />
+                    </Main>
+                )}
+            </ViewportProvider>
         </GlobalStyles>
     );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 // components
 import { ProjectList } from './ProjectList';
 import { ProjectDetails } from './ProjectDetails';
@@ -6,24 +6,32 @@ import LoadingProject from './LoadingProject';
 // Data from JSON file
 import data from '../data/project_info.json';
 
+//styles
 
 interface TechObject {
     techLabel: string;
     details: ProjDetails[];
 }
-interface ProjDetails {
+export interface ProjDetails {
     id: number;
     title: string;
     description: string;
     tech: string[];
     links: { github: string };
+    bground?: string;
 }
 
 const ProjectsBL: React.FC = () => {
     const [projData, setProjData] = useState<Array<TechObject>>([]);
     const [projList, setProjList] = useState<Array<ProjDetails>>([]);
+    //this is the dropdown Select menu
     const [listState, setListState] = useState<boolean>(false);
     const [proj, setProj] = useState<ProjDetails>();
+    const projImage: string | undefined = useMemo(() => {
+        if (proj !== undefined) {
+            return proj.bground;
+        }
+    }, [proj]);
 
     useEffect(() => {
         setProjData([...data]);
@@ -34,9 +42,8 @@ const ProjectsBL: React.FC = () => {
                 });
             })
             .flat();
-        const firstProject = projectList[0];
         setProjList(projectList);
-        setProj(firstProject);
+        setProj(projectList[0]);
     }, []);
 
     const handleSetProject = (str: string) => {
@@ -45,26 +52,26 @@ const ProjectsBL: React.FC = () => {
                 return ele;
             }
         });
-        if (null !== findProj) {
+
+        if (findProj !== undefined) {
             setProj(findProj[0]);
         } else {
             setProj(projList[0]);
         }
     };
 
-    if (proj) {
+    if (proj && proj !== undefined) {
         return (
             <div className="wrapper">
                 <ProjectList listState={listState} setListState={setListState} handleSetProject={handleSetProject} projData={projData} />
-                <ProjectDetails proj={proj!} />
+                <ProjectDetails projImage={projImage || './GenericBground.jpg'} proj={proj} />
             </div>
         );
     } else {
         return (
-            <div className="wrapper">
+            <div style={{ backgroundImage: `url(${projImage})` }} className="wrapper">
                 <ProjectList listState={listState} setListState={setListState} handleSetProject={handleSetProject} projData={projData} />
                 <LoadingProject />
-               
             </div>
         );
     }

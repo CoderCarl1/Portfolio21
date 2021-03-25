@@ -2,12 +2,6 @@ import React, { useState, useRef } from 'react';
 import * as EmailValidator from 'email-validator';
 import ContactForm from './ContactForm';
 
-const encode = (data: any) => {
-    return Object.keys(data)
-        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&');
-};
-
 interface Form {
     email: string;
     subject: string;
@@ -15,6 +9,11 @@ interface Form {
 }
 
 const ContactFormBL: React.FC = () => {
+    const encode = (data: any) => {
+        return Object.keys(data)
+            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    };
     const [formValue, setFormValue] = useState<Form>({
         email: '',
         subject: '',

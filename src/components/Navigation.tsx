@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import HamburgerIcon from './HamburgerIcon';
+import React, { useRef } from 'react';
+//state
+import { useViewport } from '../ViewPortContext';
+//styles
 import styled from 'styled-components';
+//Component imports
+import HamburgerIcon from './HamburgerIcon';
 
 const Nav = styled.nav`
     height: 15vh;
@@ -130,18 +134,8 @@ interface Props {
 
 export const Navigation: React.FC<Props> = ({ setNavOpen, navOpen }) => {
     const ulRef = useRef<HTMLUListElement>(null);
-    const [width, setWidth] = useState(window.innerWidth);
+    const { width } = useViewport();
     const tabletBP = 768;
-
-    const handleWindowResize = () => {
-        setWidth(window.innerWidth);
-        console.log('desktop resized: ', width);
-    };
-
-    useEffect(() => {
-        window.addEventListener('resize', handleWindowResize);
-        return () => window.removeEventListener('resize', handleWindowResize);
-    }, []);
 
     const handleULClick: () => void = () => {
         setNavOpen(!navOpen);
@@ -155,7 +149,6 @@ export const Navigation: React.FC<Props> = ({ setNavOpen, navOpen }) => {
         return (
             /* Tablet + DeskTop Layout */
             <Nav className="nav" aria-label="Main">
-                {/* <div className="nav-wrapper flex"> */}
                 <img src="./logo80.png" className="logo" alt="Carl Davidson - Logo" aria-hidden="true" />
 
                 <ul className="nav_items">
@@ -169,7 +162,6 @@ export const Navigation: React.FC<Props> = ({ setNavOpen, navOpen }) => {
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                {/* </div> */}
             </Nav>
         );
     } else {

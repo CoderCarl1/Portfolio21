@@ -15,9 +15,6 @@ interface Props {
     formValue: Form;
     messageSent: boolean;
     popMessage: () => void;
-    // handleBlur: () => void;
-    // handleSelect: () => void;
-    // invalidMessages: { [key: string]: string };
 }
 
 const ContactForm: React.FC<Props> = (Props) => {
@@ -43,7 +40,7 @@ const ContactForm: React.FC<Props> = (Props) => {
                 <legend>Contact Form</legend>
 
                 <label htmlFor="email">
-                    Email
+                    <h4>Email</h4>
                     <input
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         type="email"
@@ -57,7 +54,7 @@ const ContactForm: React.FC<Props> = (Props) => {
                     ></input>
                 </label>
                 <label htmlFor="subject">
-                    Subject
+                    <h4>Subject</h4>
                     <input
                         min="1"
                         pattern="/([ ]*+[0-9A-Za-z]++[ ]*+)+/"
@@ -72,7 +69,7 @@ const ContactForm: React.FC<Props> = (Props) => {
                     ></input>
                 </label>
                 <label htmlFor="message">
-                    Message
+                    <h4>Message</h4>
                     <textarea
                         required
                         rows={8}

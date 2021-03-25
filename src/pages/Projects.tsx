@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ProjectsBL from '../components/ProjectsBL';
-
+//state
+import { useViewport } from '../ViewPortContext';
+//styles
 import styled from 'styled-components';
 import { StyledPage } from '../styles/GlobalStyles';
+// components
 import ManOnTree from '../components/ManOnTree';
 
 const StyledProjects = styled(StyledPage)`
@@ -10,83 +13,75 @@ const StyledProjects = styled(StyledPage)`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    min-height: 650px;
     h2 {
         margin: 1rem 0;
         font-size: 3.3rem;
         color: rgb(255, 255, 255);
     }
+    h4 {
+        font-weight: lighter;
+    }
 
     .wrapper {
+        min-width: 250px;
         border-radius: 2.5rem;
-        width: 90vw;
+        width: 90%;
         overflow: hidden;
         background: #ffffff;
-        height: 80vh;
+        height: 550px;
+        background-position: center; /* Center the image */
+        /* background-repeat: no-repeat; Do not repeat the image */
+        background-size: cover;
     }
 
     @media (min-width: 768px) {
-        height: 70vh;
         .wrapper {
             display: flex;
-            height: 50vh;
         }
     }
 
     @media (min-width: 1023px) {
         width: 100vw;
-        border: 1px solid red;
+        min-height: 750px;
         height: 100%;
-
+        margin-bottom: 0;
+        justify-content: space-evenly;
         .outerWrapper {
             display: flex;
-            width: 98vw;
-            max-width: 1764px;
+            max-width: 1200px;
+            /* overflow: hidden; */
+            width: 80%;
+            height: 750px;
+            position: relative;
+            #manOnTree {
+                svg {
+                    height: 750px;
+                }
+                z-index: 1;
+                position: absolute;
+                right: -25%;
+                top: -15%;
+                object-fit: contain;
+                filter: grayscale(100%);
+                /* &:hover {
+                    animation: grayscaleHover 0.5s ease-in-out forwards;
+                } */
+            }
             .wrapper {
                 margin-right: 2rem;
                 align-self: flex-start;
-                width: 70%;
-                max-width: 600px;
-                height: 50vh;
-                max-height: 750px;
-                overflow: display;
-                background: red;
-                border: 3px solid pink;
-            }
-            #manOnTree {
-                width: 2%;
-                object-fit: contain;
-                filter: grayscale(100%);
-                &:hover {
-                    animation: grayscaleHover 0.5s ease-in-out forwards;
-                }
-            }
-        }
-        @keyframes grayscaleHover {
-            from {
-                filter: grayscale(100%);
-            }
-            to {
-                filter: grayscale(75%);
+                height: 550px;
+                width: 100%;
+                z-index: 2;
             }
         }
     }
 `;
 
 export const Projects: React.FC = () => {
-    const [width, setWidth] = useState(window.innerWidth);
+    const { width } = useViewport();
     const desktopBP = 1024;
-
-    const handleWindowResize = () => {
-        setWidth(window.innerWidth);
-        console.log("desktop resized: ", width)
-    }
-
-    useEffect(() => {
-        window.addEventListener('resize', handleWindowResize);
-        return () => window.removeEventListener('resize', handleWindowResize);
-        
-    }, []);
 
     if (width >= desktopBP) {
         return (

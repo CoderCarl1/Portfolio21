@@ -4,27 +4,31 @@ import styled from 'styled-components';
 import { StyledPage } from '../styles/GlobalStyles';
 
 const StyledContact = styled(StyledPage)`
-    height: 90vh;
+    /* height: 90vh; */
+    min-height: 750px;
+    justify-content: center;
+    min-width: 320px;
     .invalid {
         border: 1px solid red;
     }
     .invalidLabel {
-        color: red;
+        color: #ff0000;
+        p {
+            margin-top: 15px;
+            z-index: 2;
+            font-size: 2rem;
+        }
     }
     form {
-        margin: 0 2vw;
-        max-width: 96vw;
-
-        height: 90vh;
+        height: 750px;
+        width: 100%;
+        max-width: 720px;
         padding-bottom: 2rem;
-        /* justify-content: center; */
         align-items: center;
-
+        margin: 0 auto;
         fieldset {
             width: 90%;
             padding-top: 1rem;
-            /* background: #8f8f8f; */
-
             padding-bottom: 4rem;
             border: 4px solid rgba(255, 255, 255, 0.556);
             border-radius: 10px;
@@ -33,7 +37,6 @@ const StyledContact = styled(StyledPage)`
         legend {
             font-size: 2rem;
             color: rgba(255, 255, 255, 0.7);
-            /* text-shadow: #432c2c 0px 0px 3px; */
         }
         label {
             margin-bottom: 0.5rem;
@@ -43,10 +46,18 @@ const StyledContact = styled(StyledPage)`
             flex-direction: column;
             color: rgba(255, 255, 255, 0.7);
             font-size: 1.5rem;
-            /* justify-content: space-between; */
+            p {
+                margin-top: 25px;
+                margin-bottom: 10px;
+            }
+            &:focus {
+                p {
+                    color: blue;
+                }
+            }
         }
         input {
-            width: 70vw;
+            width: 70%;
             height: 2rem;
             display: block;
         }
@@ -93,7 +104,6 @@ const StyledContact = styled(StyledPage)`
                 position: relative;
                 top: 0.5rem;
                 border-radius: 0.5rem;
-
                 box-shadow: -1px -1px 2px 0 rgba(0, 0, 0, 0.3), 2px 2px 2.5px rgba(255, 255, 255, 0.25);
                 text-align: center;
                 font-size: 1.1rem;

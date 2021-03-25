@@ -7,6 +7,7 @@ const StyledAbout = styled(StyledPage)`
     justify-content: space-between;
     height: 50vh;
     color: rgb(255, 255, 255);
+    overflow-y: hidden;
 
     h2 {
         text-align: center;
@@ -30,19 +31,30 @@ const StyledAbout = styled(StyledPage)`
             font-weight: bold;
         }
     }
-        /* h1 {
+    /* h1 {
             position: absolute;
             top: 7vh;
             left: 30%;
             z-index: 3;
         } */
-
 `;
 
 export const About: React.FC = () => {
     return (
         <StyledAbout id="AboutCarlDavidson" className="flex-col">
             <h1>Carl Davidson</h1>
+            <article>
+                <h2>This portfolio was written with Accessibility in mind</h2>
+                <p>As such, There is:</p>
+                <ul>
+                    <li>limited animation on the page</li>
+                    <li>No flashing lights are limited</li>
+                    <li>High contrast is a concern</li>
+                    <li>Aria Roles and Semantic Markup</li>
+                    <li>Landmarks </li>
+                    <li>tab index</li>
+                </ul>
+            </article>
             <article>
                 <h2>Dev Skills</h2>
                 <div>
