@@ -49,13 +49,26 @@ export const StyledForm = styled.div`
         position: relative;
         text-align: center;
     }
-    .list-closed {
-        /* 
-        animation: closeMenu 0.3s ease-out forwards
-         */
+    .list {
+        position: relative;
     }
+    .list-closed {
+        position: absolute;
+        animation: menu-change 2s ease-out forwards;
+    }
+    @keyframes menu-change {
+        from {
+            left: 0;
+        }
+        to {
+            left: -1000px;
+        }
+    }
+
     //class given to UL when clicked
     .list-open {
+        animation: menu-change 2s ease-out forwards;
+        animation-direction: reverse;
         z-index: 3;
         position: relative;
         overflow-y: scroll;
@@ -219,7 +232,6 @@ export const StyledDTProjList = styled(StyledForm)`
 // this is the PROJECT-DETAILS
 export const StyledProject = styled.article`
     background: rgb(255, 255, 255);
-    /* overflow-x: hidden; */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -228,20 +240,17 @@ export const StyledProject = styled.article`
         background: rgba(65, 64, 64, 0.856);
     }
     //mob styles
-
-    /* border: 3px solid pink; */
     .proj-description {
         color: black;
         padding: 0 1.5rem;
+        min-height: 100px;
     }
     h3 {
         font-size: 2rem;
         text-align: center;
-        /* margin: 0.5rem 0; */
-        background: rgba(0, 0, 0, 0.404);
-        /* box-shadow: inset 0px -2px 3px #ffffff; */
+        padding: 0.5rem 0;
+        background: rgba(0, 0, 0, 0.7);
         border: none;
-        /* border-radius: 25px; */
         color: rgb(255, 255, 255);
     }
 
@@ -251,7 +260,7 @@ export const StyledProject = styled.article`
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 12%;
+        /* height: 7%; */
         position: relative;
         //holds the images + p tags
         .proj-link-wrapper {
@@ -262,14 +271,24 @@ export const StyledProject = styled.article`
             margin-left: 2rem;
         }
         //links / images
-        a {
+        .proj-link-wrapper {
             margin: 1rem 0;
+            p {
+                background: rgb(255, 255, 255);
+                color: black;
+                padding: 0 0.25rem;
+                border-radius: 5555px;
+            }
             svg {
                 overflow: visible;
                 max-height: 4rem;
                 max-width: 4rem;
             }
             &:hover {
+                p {
+                    color: rgb(77, 69, 130);
+                    transform: scale(1.1);
+                }
                 #OuterCircle {
                     fill: rgb(77, 69, 130);
                     transform: scale(1.1);
@@ -310,22 +329,18 @@ export const StyledProject = styled.article`
         }
         .tech-used {
             color: black;
-            overflow-y: scroll;
             list-style: none;
             display: flex;
             flex-wrap: wrap;
             border-radius: 1.5rem;
-            height: 5rem;
+            min-height: 5rem;
             li {
                 margin: 0 1rem;
+                padding: 0.2rem;
             }
         }
     }
     //this is the project description
-    p {
-        min-height: 100px;
-        /* background: white; */
-    }
 
     //mob styles
     @media (max-width: 767px) {
@@ -333,20 +348,19 @@ export const StyledProject = styled.article`
         min-width: 320px;
         min-height: 450px;
         width: 100%;
-        padding: 0 2rem;
+        padding: 0 1rem;
         display: flex;
         flex-direction: column;
         //wrapper that provides the background above the bgimage
         .proj-wrapper {
-            /* padding-left: 1.5rem; */
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
+            height: 500px;
             margin: 0 auto;
             //'tech used'
             fieldset {
-                margin: 2rem 0.5rem;
+                margin: 1.25rem 0.5rem;
                 //ul
                 .tech-used {
                     //li for each tech item

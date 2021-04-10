@@ -26,15 +26,15 @@ export const ProjectDetails: React.FC<Props> = ({ proj, projImage }) => {
                     <div className="proj-link-wrapper">
                         <a target="_blank" rel="noreferrer" href={proj.links.github}>
                             <Githubsvg />
+                            <p>Github Repo</p>
                         </a>
-                        <p>Github Repo</p>
                     </div>
                     <div className="proj-link-wrapper">
                         <a target="_blank" rel="noreferrer" href={proj.links.site}>
                             {' '}
-                            <img src="./WebsiteIcon.svg" title="No Current Deployed site" alt="advice that there is no deployed site" />
+                            <img src="./WebsiteIcon.svg" title="Current Deployed site" alt="Link to currently deployed site" />
+                            <p>Deployed Site</p>
                         </a>
-                        <p>Not Currently Deployed</p>
                     </div>
                 </div>
             );
@@ -44,8 +44,8 @@ export const ProjectDetails: React.FC<Props> = ({ proj, projImage }) => {
                     <div className="proj-link-wrapper">
                         <a target="_blank" rel="noreferrer" href={proj.links.github}>
                             <Githubsvg />
+                            <p>Github Repo</p>
                         </a>
-                        <p>Github Repo</p>
                     </div>
                     <div className="proj-link-wrapper">
                         <img src="./NotDeployedIcon.svg" alt="No Current Deployed site" />
@@ -65,7 +65,7 @@ export const ProjectDetails: React.FC<Props> = ({ proj, projImage }) => {
                     <p className="proj-description">{proj.description}</p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset className="tech_used">
                     <legend>Tech Used</legend>
                     <ul className="tech-used">
                         {proj.tech.map((tech, index) => (

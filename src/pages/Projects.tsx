@@ -14,6 +14,8 @@ const StyledProjects = styled(StyledPage)`
     justify-content: flex-start;
     align-items: center;
     min-height: 650px;
+    max-width: 500px;
+    width: 90vw;
     h2 {
         margin: 1rem 0;
         font-size: 3.3rem;
@@ -36,6 +38,9 @@ const StyledProjects = styled(StyledPage)`
     }
 
     @media (min-width: 768px) {
+        margin: 0 2rem;
+        max-width: 1000px;
+
         .wrapper {
             display: flex;
         }

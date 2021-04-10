@@ -1,3 +1,4 @@
+// import React, { useRef, useLayoutEffect } from 'react';
 import React from 'react';
 // import styled from 'styled-components';
 
@@ -20,12 +21,16 @@ interface Props {
 const ContactForm: React.FC<Props> = (Props) => {
     const { handleSubmit, handleFormChange, formEmail, formSubject, formMessage, formValue, messageSent, popMessage } = Props;
 
+    // useLayoutEffect(() => {}, messageSent);
+
+    // const noticeX = useRef<HTMLButtonElement>(null);
+
     const messageSentNotification = () => {
         return messageSent ? (
             <ul>
-                <li className="notice">
+                <li className="notice" role="alert">
                     message Sent
-                    <button className="noticeX" onKeyDown={() => popMessage()} onClick={() => popMessage()}>
+                    <button className="noticeX" onKeyDown={() => popMessage()} onClick={() => popMessage()} tabIndex={-1}>
                         x
                     </button>
                 </li>
@@ -38,7 +43,11 @@ const ContactForm: React.FC<Props> = (Props) => {
             <input type="hidden" name="form-name" value="Contact Form" />
             <fieldset>
                 <legend>Contact Form</legend>
-
+                <p>
+                    Required fields are marked with a <span>*</span>
+                </p>
+                {/* Create a list of possible issues and update the contents of the div depending on what went wrong on form submission */}
+                <div id="form-issues"></div>
                 <label htmlFor="email">
                     <h4>Email</h4>
                     <input
@@ -50,6 +59,7 @@ const ContactForm: React.FC<Props> = (Props) => {
                         ref={formEmail}
                         value={formValue.email}
                         onChange={() => handleFormChange()}
+                        autoComplete="email"
                         required
                     ></input>
                 </label>
@@ -70,17 +80,7 @@ const ContactForm: React.FC<Props> = (Props) => {
                 </label>
                 <label htmlFor="message">
                     <h4>Message</h4>
-                    <textarea
-                        required
-                        rows={8}
-                        // cols={50}
-                        placeholder="Your message..."
-                        id="message"
-                        name="message"
-                        ref={formMessage}
-                        value={formValue.message}
-                        onChange={() => handleFormChange()}
-                    ></textarea>
+                    <textarea required rows={8} placeholder="Your message..." id="message" name="message" ref={formMessage} value={formValue.message} onChange={() => handleFormChange()}></textarea>
                 </label>
                 <button type="submit" value="Submit">
                     SUBMIT

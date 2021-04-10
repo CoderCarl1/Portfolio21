@@ -58,7 +58,7 @@ const App: React.FC = () => {
             <ViewportProvider>
                 <Navigation setNavOpen={setNavOpen} navOpen={navOpen} />
                 {!navOpen && (
-                    <Main aria-label="content" aria-labelledby="AboutCarlDavidson">
+                    <Main aria-label="content" aria-describedby="AboutCarlDavidson">
                         <About />
                         <Projects />
                         <Contact />

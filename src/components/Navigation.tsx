@@ -170,6 +170,7 @@ export const Navigation: React.FC<Props> = ({ setNavOpen, navOpen }) => {
             <Nav className="nav" aria-label="Main">
                 <div className="nav-wrapper flex">
                     <img src="./logo80.png" className="logo" alt="Carl Davidson - Logo" aria-hidden="true" />
+
                     <p> Carl Davidson</p>
                     <ul ref={ulRef} className="mob_nav_items">
                         <li>

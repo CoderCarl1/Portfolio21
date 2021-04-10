@@ -27,8 +27,15 @@ export const ProjectList: React.FC<Props> = ({ listState, setListState, projData
     const ProjListRef = useRef<HTMLUListElement>(null);
     const { width } = useViewport();
 
-    const handleProjSelect: (e: React.KeyboardEvent<HTMLButtonElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => void = (e) => {
-        handleSetProject(e.currentTarget.value);
+    const handleKeySelect: (e: React.KeyboardEvent<HTMLButtonElement>) => void = (e) => {
+        if (e.key === '13') {
+            handleSetProject(e.currentTarget.value);
+        }
+    };
+    const handleProjSelect: (e: React.MouseEvent<HTMLButtonElement>) => void = (e) => {
+        if (e.type == 'click') {
+            handleSetProject(e.currentTarget.value);
+        }
         handleListState();
     };
 
@@ -48,7 +55,7 @@ export const ProjectList: React.FC<Props> = ({ listState, setListState, projData
                 {projects.details.map((project: ProjDetails, index: number) => {
                     return (
                         <li role="menuitem" key={index.toString()} className="projListItem">
-                            <button value={project.title} onKeyDown={(e) => handleProjSelect(e)} onClick={(e) => handleProjSelect(e)}>
+                            <button value={project.title} onKeyDown={(e) => handleKeySelect(e)} onClick={(e) => handleProjSelect(e)}>
                                 {project.title}
                             </button>
                         </li>
@@ -59,40 +66,29 @@ export const ProjectList: React.FC<Props> = ({ listState, setListState, projData
     });
 
     const list = (
-        <ul className="list-open" role="menu" ref={ProjListRef}>
-            <li className="list-title">
-                Select Project{' '}
-                <button className="list-toggle" onClick={() => handleListState()} onKeyDown={() => handleListState()}>
-                    =
-                </button>
-            </li>
-
-            {options}
-        </ul>
+        <div className="list">
+            <button className="list-toggle" onClick={() => handleListState()} onKeyDown={() => handleListState()}>
+                Select Project
+            </button>
+            {/* <li className="list-title"> </li> */}
+            <ul className="list-closed" role="menu" ref={ProjListRef}>
+                {options}
+            </ul>
+        </div>
     );
-    const noList = (
-        <ul className="list-closed" role="menu" ref={ProjListRef}>
-            <li className="list-title">
-                Select Project <button className="list-toggle" onClick={() => handleListState()} onKeyDown={() => handleListState()}></button>
-            </li>
-        </ul>
-    );
+    // const noList = (
+    //     <ul className="list-closed" role="menu" ref={ProjListRef}>
+    //         <li className="list-title">
+    //             Select Project <button className="list-toggle" onClick={() => handleListState()} onKeyDown={() => handleListState()}></button>
+    //         </li>
+    //     </ul>
+    // );
 
-    if (listState) {
-        if (width > 1020) {
-            return <StyledDTProjList>{list}</StyledDTProjList>;
-        } else if (width > 760) {
-            return <StyledTabletProjList>{list}</StyledTabletProjList>;
-        } else {
-            return <StyledProjList>{list}</StyledProjList>;
-        }
+    if (width > 1020) {
+        return <StyledDTProjList>{list}</StyledDTProjList>;
+    } else if (width > 760) {
+        return <StyledTabletProjList>{list}</StyledTabletProjList>;
     } else {
-        if (width > 1020) {
-            return <StyledDTProjList>{noList}</StyledDTProjList>;
-        } else if (width > 760) {
-            return <StyledTabletProjList>{noList}</StyledTabletProjList>;
-        } else {
-            return <StyledProjList>{noList}</StyledProjList>;
-        }
+        return <StyledProjList>{list}</StyledProjList>;
     }
 };

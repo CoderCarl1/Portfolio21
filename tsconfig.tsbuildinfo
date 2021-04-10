@@ -241,6 +241,16 @@
         "signature": "9692a141afe8f30a5542189ffceb1a043f3d1fbaf0e07d28a8e9ac6d32c4cb01",
         "affectsGlobalScope": true
       },
+      "./node_modules/@types/react/jsx-runtime.d.ts": {
+        "version": "af7fd2870746deed40e130fc0a3966de74e8f52a97ec114d0fbb35876ab05ca9",
+        "signature": "af7fd2870746deed40e130fc0a3966de74e8f52a97ec114d0fbb35876ab05ca9",
+        "affectsGlobalScope": false
+      },
+      "./src/ViewPortContext.js": {
+        "version": "25ccedcc92b3154bdccb611a92bf83242be1b7ece0c076302da33056f07d59cf",
+        "signature": "c49a669b898f4e4efc118271a794d016050302bcedde6c88db96002d1f504fa3",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@types/hoist-non-react-statics/index.d.ts": {
         "version": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
         "signature": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
@@ -251,8 +261,13 @@
         "signature": "6839e1779e1f61e0ed62b1ca3ff7e74dc70479a5455077a38434d0e404103c28",
         "affectsGlobalScope": true
       },
+      "./src/components/HamburgerIcon.tsx": {
+        "version": "64f311f90ec83a6d1b95716ca89636da54c100805f7fff488cda287865e5e806",
+        "signature": "735886dced594a6f51626de8e6b43c2e9ce8a35dc15a493647e70cc059083b30",
+        "affectsGlobalScope": false
+      },
       "./src/components/Navigation.tsx": {
-        "version": "005b8fa7d28486c54f4786f84219170cb9ac330a65d444ab549a9b20d51e2b04",
+        "version": "a4fe92c2251dfe5d424966db9add394b2b88c759c93aad01f9d612beadad0442",
         "signature": "1e314c2592a307a3490b5d2f27ad45d1b428eb9aa1eaa54da11cdcbfb969ce52",
         "affectsGlobalScope": false
       },
@@ -267,38 +282,48 @@
         "affectsGlobalScope": false
       },
       "./src/components/ContactForm.tsx": {
-        "version": "005067dbceda5465b153e7428d3e129f04cf5c606cef2d5569e337387eef5f63",
+        "version": "9ab1c3f6a9d2b8d834736d65b5f3eb3a7214d5dcbcda6a2579163127ac016ff2",
         "signature": "79cb94c168711224db534e3c68e7cc785517f74a56f1cc36a32c667e9bc133e6",
         "affectsGlobalScope": false
       },
       "./src/components/ContactFormBL.tsx": {
-        "version": "0b93b95d31036bba6659e4c41a274d94b64aa6936623b81a3c163e034c785296",
+        "version": "8dfff7f286e781e0beb431503635d6857ec23c9951005b50ea17786d89c5fa14",
         "signature": "fdce9e1de1e7e8ec78dc1cba41fb441cb0a54a170066cb875e5f2314c3cf73d9",
         "affectsGlobalScope": false
       },
       "./src/styles/GlobalStyles.ts": {
-        "version": "68d23ee7e37d0db34ba285f6d8adb9efbe5fbb6c68b868870a5692d2b6c94f1b",
+        "version": "4e4029c43006699648e196de6bfdf6d3d644f020d52d7ab1bcc59ebeda36e555",
         "signature": "a79a33d31436f8e579bf2930ef1f08a10f34d0d5f07fafbf14814588255ee34e",
         "affectsGlobalScope": false
       },
       "./src/pages/Contact.tsx": {
-        "version": "5dbf215cb295ca125413610d6f9b97427c81ab120b093b8fc5b83c8416f56204",
+        "version": "6b385334a7d711aac99ac0689a336df43564c8bd03ee5b323c12ffa74204045d",
         "signature": "ab6fca61eca59a9bc2e3ba3a21f9aa394cc09256f61c56b9013ce19bb0f244cf",
         "affectsGlobalScope": false
       },
       "./src/pages/About.tsx": {
-        "version": "115d44bde82f2f72ede5fb96f3b5aa13673ef52a8ffe392e8ccf2f49e862c7b9",
+        "version": "1437001be2d455623586698813a10b9c5f2a742e393d951baa28cb14f7b52146",
         "signature": "7a16fbd238835b41fb137d697800d7631754007978ecbf3edd917241b43770eb",
         "affectsGlobalScope": false
       },
+      "./src/components/ProjectStyles.tsx": {
+        "version": "cb08886f109ef3c50a17fca51942a03335afd0d344458692d27661752e2a5023",
+        "signature": "d0bc8faad2a11fee3fe4b8d9aacaf2a61b99e30ad27acb5df680dae68c0425b0",
+        "affectsGlobalScope": false
+      },
       "./src/components/ProjectList.tsx": {
-        "version": "5dd3ecb04a8d4a2f24c90a048d72ede91bdcb759b319d7c3d86b4b63cbb247f1",
-        "signature": "63dccf9319e4db9bfde6256ae9b0a7c3e6fa5affd894a662ef7448d1161e0301",
+        "version": "443d6e7e1dcb989213524cb1c66419dab38a05118edbbdd38b3d1cb9c9fa1839",
+        "signature": "2409d5a632caff243989eb1c6025fd4c1257cd42b5498010a31545ee5ef578c6",
+        "affectsGlobalScope": false
+      },
+      "./src/components/GithubCatopus.tsx": {
+        "version": "e185a3ad0629ca7e0101c084a8a4ab7f2bfa014e4032b8a6a5c22a4e6658801e",
+        "signature": "83c5b31b209e19d25810429ca3909dcb5bd8f7abc26fd86af678cc37e0099ed3",
         "affectsGlobalScope": false
       },
       "./src/components/ProjectDetails.tsx": {
-        "version": "fa55a4bd5232b486512836720002107ca9c11fe19288ebb3874278401a00e1ae",
-        "signature": "a6078c3e6f30f6b1fdc6a8cd73a4345a37c39548f160dc7f9a4cb80031128452",
+        "version": "c15eee273aaf7fc9a2f13321f3fc5e082f306244d0170cdc8ec9d85bbeae5a2b",
+        "signature": "06ebfa206b6a53a3cfb0f36493233fc196faa738187e93e29ed70ae8654ddd07",
         "affectsGlobalScope": false
       },
       "./src/components/LoadingProject.tsx": {
@@ -307,22 +332,27 @@
         "affectsGlobalScope": false
       },
       "./src/data/project_info.json": {
-        "version": "024f375bb529361d7079ee9874a835a1911cba605a4913c43557a97bddd0d74d",
-        "signature": "6286da8ba53207a35d558d5e79cbe01c65f75c22026a40b0d5a38d4c81a20d0b",
+        "version": "17d1466e996a92968299234138549a7f9ac152c9cd6c8a7e3246b2b4e7b0d1f2",
+        "signature": "25bb6c44e096162e95ac68802a3182a08fad31f111dffdb8372a9356facd1083",
         "affectsGlobalScope": true
       },
       "./src/components/ProjectsBL.tsx": {
-        "version": "a37c8a957add69ce5400d12ff3b0057bd0ad4ebc261c412b618ef85d231c4ca5",
-        "signature": "8e84ed782cd827dd4c1bb06ae07c4022cb8223bc7c5d41cc98af54bcc522d891",
+        "version": "f0b7146b88bbc4987a1fac730642e2a57179c64f69af92ef166cf86d8b405177",
+        "signature": "ac3b8bc7fd1a7d59234a9fa43b57793eb2e08753cc42c90e4594c06fca724986",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ManOnTree.tsx": {
+        "version": "123a17efdeda9767b506ab0ae149e758e476919d98a5bcdf3be62af776f311a2",
+        "signature": "d43ed9c51ffcdd33ce5ea5d838dc0b8965d6910ad4664142cdfc71cc9e9a2d8d",
         "affectsGlobalScope": false
       },
       "./src/pages/Projects.tsx": {
-        "version": "5e15cee34da752460b4a5e1c1367f1cef57e628d9f6ab1c27ed61f903c64b7db",
+        "version": "44d43bf88473fe5a58c4be1b5411f4250329fd6018ab2f94a05bdbc3cdb04bbc",
         "signature": "e3e8738cdff9afe1018c07cd14e37d0400669e9d23701cdbb174514b95fe5e10",
         "affectsGlobalScope": false
       },
       "./src/App.tsx": {
-        "version": "b86994317b56f196ce6a08f54508be5bb81cd6ed2d6a9af9c752f4683e1415a8",
+        "version": "68d98391c124e944f0f8faf6045a093ca20a263eea62e5061e12430e36384720",
         "signature": "5d6f0d27cc0d44dc09272ca7d766cd3b89cc7c6d9be32f92b642cc14edcda36c",
         "affectsGlobalScope": false
       },
@@ -899,20 +929,20 @@
     },
     "options": {
       "outDir": "./build",
-      "module": 99,
       "target": 4,
+      "jsx": 4,
+      "allowSyntheticDefaultImports": true,
+      "module": 99,
       "lib": [
         "lib.dom.d.ts",
         "lib.dom.iterable.d.ts",
         "lib.esnext.d.ts"
       ],
       "allowJs": true,
-      "jsx": 2,
       "moduleResolution": 2,
       "rootDir": "./src",
       "skipLibCheck": true,
       "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
       "strict": true,
       "forceConsistentCasingInFileNames": true,
       "isolatedModules": true,
@@ -924,7 +954,6 @@
       "noUnusedParameters": true,
       "incremental": true,
       "noFallthroughCasesInSwitch": true,
-      "project": "./tsconfig.json",
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
@@ -1248,6 +1277,9 @@
         "./node_modules/@types/react/global.d.ts",
         "./node_modules/csstype/index.d.ts"
       ],
+      "./node_modules/@types/react/jsx-runtime.d.ts": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
       "./node_modules/@types/resolve/index.d.ts": [
         "./node_modules/@types/node/index.d.ts"
       ],
@@ -1366,7 +1398,9 @@
       ],
       "./src/App.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts",
+        "./src/ViewPortContext.js",
         "./src/components/Footer.tsx",
         "./src/components/Navigation.tsx",
         "./src/pages/About.tsx",
@@ -1374,63 +1408,106 @@
         "./src/pages/Projects.tsx",
         "./src/styles/GlobalStyles.ts"
       ],
+      "./src/ViewPortContext.js": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts"
+      ],
       "./src/components/ContactForm.tsx": [
-        "./node_modules/@types/react/index.d.ts"
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts"
       ],
       "./src/components/ContactFormBL.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/email-validator/index.d.ts",
         "./src/components/ContactForm.tsx"
       ],
       "./src/components/Footer.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts"
+      ],
+      "./src/components/GithubCatopus.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts"
+      ],
+      "./src/components/HamburgerIcon.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts"
       ],
       "./src/components/LoadingProject.tsx": [
-        "./node_modules/@types/react/index.d.ts"
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts"
+      ],
+      "./src/components/ManOnTree.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts"
       ],
       "./src/components/Navigation.tsx": [
         "./node_modules/@types/react/index.d.ts",
-        "./node_modules/@types/styled-components/index.d.ts"
+        "./node_modules/@types/react/jsx-runtime.d.ts",
+        "./node_modules/@types/styled-components/index.d.ts",
+        "./src/ViewPortContext.js",
+        "./src/components/HamburgerIcon.tsx"
       ],
       "./src/components/ProjectDetails.tsx": [
         "./node_modules/@types/react/index.d.ts",
-        "./node_modules/@types/styled-components/index.d.ts"
+        "./node_modules/@types/react/jsx-runtime.d.ts",
+        "./src/components/GithubCatopus.tsx",
+        "./src/components/ProjectStyles.tsx"
       ],
       "./src/components/ProjectList.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
+        "./src/ViewPortContext.js",
+        "./src/components/ProjectStyles.tsx"
+      ],
+      "./src/components/ProjectStyles.tsx": [
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts"
       ],
       "./src/components/ProjectsBL.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./src/components/LoadingProject.tsx",
         "./src/components/ProjectDetails.tsx",
         "./src/components/ProjectList.tsx",
         "./src/data/project_info.json"
       ],
+      "./src/data/project_info.json": [
+        "./node_modules/@types/react/jsx-runtime.d.ts"
+      ],
       "./src/index.tsx": [
         "./node_modules/@types/react-dom/index.d.ts",
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./src/App.tsx"
       ],
       "./src/pages/About.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts",
         "./src/styles/GlobalStyles.ts"
       ],
       "./src/pages/Contact.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts",
         "./src/components/ContactFormBL.tsx",
         "./src/styles/GlobalStyles.ts"
       ],
       "./src/pages/Projects.tsx": [
         "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts",
+        "./src/ViewPortContext.js",
+        "./src/components/ManOnTree.tsx",
         "./src/components/ProjectsBL.tsx",
         "./src/styles/GlobalStyles.ts"
       ],
       "./src/styles/GlobalStyles.ts": [
+        "./node_modules/@types/react/jsx-runtime.d.ts",
         "./node_modules/@types/styled-components/index.d.ts"
       ]
     },
@@ -1755,6 +1832,9 @@
         "./node_modules/@types/react/global.d.ts",
         "./node_modules/csstype/index.d.ts"
       ],
+      "./node_modules/@types/react/jsx-runtime.d.ts": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
       "./node_modules/@types/resolve/index.d.ts": [
         "./node_modules/@types/node/index.d.ts"
       ],
@@ -1883,7 +1963,16 @@
       "./src/components/Footer.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
+      "./src/components/GithubCatopus.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/HamburgerIcon.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
       "./src/components/LoadingProject.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ManOnTree.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
       "./src/components/Navigation.tsx": [
@@ -1894,6 +1983,9 @@
       ],
       "./src/components/ProjectList.tsx": [
         "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/ProjectStyles.tsx": [
+        "./node_modules/@types/styled-components/index.d.ts"
       ],
       "./src/components/ProjectsBL.tsx": [
         "./node_modules/@types/react/index.d.ts"
@@ -1998,6 +2090,7 @@
       "./node_modules/@types/react-router/index.d.ts",
       "./node_modules/@types/react/global.d.ts",
       "./node_modules/@types/react/index.d.ts",
+      "./node_modules/@types/react/jsx-runtime.d.ts",
       "./node_modules/@types/resolve/index.d.ts",
       "./node_modules/@types/source-list-map/index.d.ts",
       "./node_modules/@types/stack-utils/index.d.ts",
@@ -2076,13 +2169,18 @@
       "./node_modules/typescript/lib/lib.esnext.string.d.ts",
       "./node_modules/typescript/lib/lib.esnext.weakref.d.ts",
       "./src/App.tsx",
+      "./src/ViewPortContext.js",
       "./src/components/ContactForm.tsx",
       "./src/components/ContactFormBL.tsx",
       "./src/components/Footer.tsx",
+      "./src/components/GithubCatopus.tsx",
+      "./src/components/HamburgerIcon.tsx",
       "./src/components/LoadingProject.tsx",
+      "./src/components/ManOnTree.tsx",
       "./src/components/Navigation.tsx",
       "./src/components/ProjectDetails.tsx",
       "./src/components/ProjectList.tsx",
+      "./src/components/ProjectStyles.tsx",
       "./src/components/ProjectsBL.tsx",
       "./src/data/project_info.json",
       "./src/index.tsx",
@@ -2438,6 +2536,10 @@
         1
       ],
       [
+        "./node_modules/@types/react/jsx-runtime.d.ts",
+        1
+      ],
+      [
         "./node_modules/@types/resolve/index.d.ts",
         1
       ],
@@ -2570,7 +2672,55 @@
         1
       ],
       [
+        "./node_modules/typescript/lib/lib.dom.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.dom.iterable.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.collection.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.core.d.ts",
+        1
+      ],
+      [
         "./node_modules/typescript/lib/lib.es2015.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.generator.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.promise.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2016.array.include.d.ts",
         1
       ],
       [
@@ -2582,7 +2732,51 @@
         1
       ],
       [
+        "./node_modules/typescript/lib/lib.es2017.intl.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2017.object.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2017.string.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+        1
+      ],
+      [
         "./node_modules/typescript/lib/lib.es2018.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2018.intl.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2018.promise.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2019.array.d.ts",
         1
       ],
       [
@@ -2590,7 +2784,47 @@
         1
       ],
       [
+        "./node_modules/typescript/lib/lib.es2019.object.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2019.string.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+        1
+      ],
+      [
         "./node_modules/typescript/lib/lib.es2020.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2020.intl.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2020.promise.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2020.string.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.es5.d.ts",
         1
       ],
       [
@@ -2598,7 +2832,27 @@
         1
       ],
       [
+        "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.esnext.promise.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.esnext.string.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/lib.esnext.weakref.d.ts",
+        1
+      ],
+      [
         "./src/App.tsx",
+        1
+      ],
+      [
+        "./src/ViewPortContext.js",
         1
       ],
       [
@@ -2614,7 +2868,19 @@
         1
       ],
       [
+        "./src/components/GithubCatopus.tsx",
+        1
+      ],
+      [
+        "./src/components/HamburgerIcon.tsx",
+        1
+      ],
+      [
         "./src/components/LoadingProject.tsx",
+        1
+      ],
+      [
+        "./src/components/ManOnTree.tsx",
         1
       ],
       [
@@ -2627,6 +2893,10 @@
       ],
       [
         "./src/components/ProjectList.tsx",
+        1
+      ],
+      [
+        "./src/components/ProjectStyles.tsx",
         1
       ],
       [

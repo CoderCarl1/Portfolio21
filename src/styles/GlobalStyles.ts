@@ -7,6 +7,11 @@ export const StyledPage = styled.section`
 `;
 
 export const GlobalStyles = styled.div`
+    * {
+        &:focus {
+            outline: 2px solid orange;
+        }
+    }
     max-width: 1800px;
     background: #fff;
     /* border: 1px solid green; */
