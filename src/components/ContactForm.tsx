@@ -1,5 +1,5 @@
 // import React, { useRef, useLayoutEffect } from 'react';
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 // import styled from 'styled-components';
 
 interface Form {
@@ -21,16 +21,20 @@ interface Props {
 const ContactForm: React.FC<Props> = (Props) => {
     const { handleSubmit, handleFormChange, formEmail, formSubject, formMessage, formValue, messageSent, popMessage } = Props;
 
-    // useLayoutEffect(() => {}, messageSent);
+    const noticeX = useRef<HTMLButtonElement>(null);
 
-    // const noticeX = useRef<HTMLButtonElement>(null);
+    useLayoutEffect(() => {
+        if (noticeX.current !== null) {
+            noticeX.current.focus();
+        }
+    }, [noticeX]);
 
     const messageSentNotification = () => {
         return messageSent ? (
             <ul>
                 <li className="notice" role="alert">
                     message Sent
-                    <button className="noticeX" onKeyDown={() => popMessage()} onClick={() => popMessage()} tabIndex={-1}>
+                    <button ref={noticeX} className="noticeX" onKeyDown={() => popMessage()} onClick={() => popMessage()} tabIndex={-1}>
                         x
                     </button>
                 </li>
@@ -39,8 +43,8 @@ const ContactForm: React.FC<Props> = (Props) => {
     };
 
     return (
-        <form name="Contact Form" className="flex-col" data-netlify="true" onSubmit={(event) => handleSubmit(event)}>
-            <input type="hidden" name="form-name" value="Contact Form" />
+        <form name="Contact-Form" className="flex-col" data-netlify="true" method="post" onSubmit={(event) => handleSubmit(event)}>
+            <input type="hidden" name="form-name" value="Contact-Form" />
             <fieldset>
                 <legend>Contact Form</legend>
                 <p>

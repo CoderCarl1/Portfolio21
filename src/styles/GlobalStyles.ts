@@ -9,7 +9,7 @@ export const StyledPage = styled.section`
 export const GlobalStyles = styled.div`
     * {
         &:focus {
-            outline: 2px solid orange;
+            outline: 1.5px solid orange;
         }
     }
     max-width: 1800px;

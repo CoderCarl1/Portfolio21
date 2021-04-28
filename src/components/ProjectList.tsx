@@ -1,8 +1,12 @@
 import React, { useRef } from 'react';
+// import React, { useRef } from 'react';
 //state
 import { useViewport } from '../ViewPortContext';
 //styles
 import { StyledDTProjList, StyledTabletProjList, StyledProjList } from './ProjectStyles';
+import { RiArrowUpDownFill } from 'react-icons/ri';
+//components
+import ProjectButton from './ProjectButton';
 
 interface TechObject {
     techLabel: string;
@@ -13,51 +17,61 @@ interface ProjDetails {
     title: string;
     description: string;
     tech: string[];
-    links: { github: string };
+    links: {
+        github: string;
+        site?: string;
+    };
+    bground?: string;
+    active: boolean;
 }
 
 interface Props {
     projData: Array<TechObject>;
-    handleSetProject: (str: string) => void;
-    listState: boolean;
-    setListState: React.Dispatch<React.SetStateAction<boolean>>;
+    handleSetProject: (id: number) => void;
+    proj: ProjDetails;
+    // activeProjFunc: (id: number) => void;
+    handleFocusEvent: (id: number) => void;
+    handleUnFocusEvent: () => void;
+    handleKeySelect: (e: React.KeyboardEvent<HTMLButtonElement | HTMLDivElement>) => void;
+    focusedId: number | null;
 }
 
-export const ProjectList: React.FC<Props> = ({ listState, setListState, projData, handleSetProject }) => {
+export const ProjectList: React.FC<Props> = ({ handleKeySelect, handleUnFocusEvent, handleFocusEvent, focusedId, proj, projData, handleSetProject }) => {
     const ProjListRef = useRef<HTMLUListElement>(null);
     const { width } = useViewport();
 
-    const handleKeySelect: (e: React.KeyboardEvent<HTMLButtonElement>) => void = (e) => {
-        if (e.key === '13') {
-            handleSetProject(e.currentTarget.value);
-        }
-    };
     const handleProjSelect: (e: React.MouseEvent<HTMLButtonElement>) => void = (e) => {
-        if (e.type == 'click') {
-            handleSetProject(e.currentTarget.value);
+        if (e.type === 'click') {
+            handleSetProject(focusedId || 0);
         }
-        handleListState();
+        if (width < 1020) toggleListClass();
     };
 
-    const handleListState = () => {
-        setListState(!listState);
-
+    const toggleListClass = () => {
         if (ProjListRef.current !== null) {
             ProjListRef.current.classList.toggle('list-closed');
             ProjListRef.current.classList.toggle('list-open');
         }
     };
 
-    const options: any = projData.map((projects, index) => {
+    // JSX stuff - dont need to touch
+    const options: JSX.Element[] = projData.map((projects: TechObject, index: number) => {
         return (
             <li key={index.toString()} className="projListLabel">
                 <span>{projects.techLabel}</span>
-                {projects.details.map((project: ProjDetails, index: number) => {
+                {projects.details.map((project: ProjDetails) => {
                     return (
-                        <li role="menuitem" key={index.toString()} className="projListItem">
-                            <button value={project.title} onKeyDown={(e) => handleKeySelect(e)} onClick={(e) => handleProjSelect(e)}>
-                                {project.title}
-                            </button>
+                        <li role="menuitem" key={project.id.toString()} className="projListItem">
+                            <ProjectButton
+                                id={project.id}
+                                title={project.title}
+                                handleKeySelect={handleKeySelect}
+                                focusedId={focusedId}
+                                handleProjSelect={handleProjSelect}
+                                handleFocusEvent={handleFocusEvent}
+                                proj={proj}
+                                handleUnFocusEvent={handleUnFocusEvent}
+                            />
                         </li>
                     );
                 })}
@@ -67,22 +81,23 @@ export const ProjectList: React.FC<Props> = ({ listState, setListState, projData
 
     const list = (
         <div className="list">
-            <button className="list-toggle" onClick={() => handleListState()} onKeyDown={() => handleListState()}>
-                Select Project
-            </button>
+            {width < 1020 ? (
+                <button tabIndex={0} aria-label="Select a Project" role="menu" className="list-toggle" onClick={() => toggleListClass()} onKeyDown={(e) => handleKeySelect(e)}>
+                    {' '}
+                    Select Project
+                </button>
+            ) : (
+                <div className="nav-explanation" aria-label="Select a Project" role="menu" tabIndex={0} onKeyDown={(e) => handleKeySelect(e)}>
+                    <h3>Select Project</h3>
+                    Use <RiArrowUpDownFill /> to move through the list <kbd>Enter</kbd> to select.
+                </div>
+            )}
             {/* <li className="list-title"> </li> */}
-            <ul className="list-closed" role="menu" ref={ProjListRef}>
+            <ul className={`${width < 1020 ? 'list-closed' : 'list-open'}`} tabIndex={-1} role="menu" ref={ProjListRef}>
                 {options}
             </ul>
         </div>
     );
-    // const noList = (
-    //     <ul className="list-closed" role="menu" ref={ProjListRef}>
-    //         <li className="list-title">
-    //             Select Project <button className="list-toggle" onClick={() => handleListState()} onKeyDown={() => handleListState()}></button>
-    //         </li>
-    //     </ul>
-    // );
 
     if (width > 1020) {
         return <StyledDTProjList>{list}</StyledDTProjList>;

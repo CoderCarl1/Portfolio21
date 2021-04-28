@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { StyledProject } from './ProjectStyles';
 import Githubsvg from './GithubCatopus';
 
@@ -12,13 +12,16 @@ interface ProjDetails {
         site?: string;
     };
     bground?: string;
+    active: boolean;
 }
 interface Props {
     proj: ProjDetails;
     projImage: string;
 }
+type Ref = React.RefAttributes<HTMLHeadingElement>;
 
-export const ProjectDetails: React.FC<Props> = ({ proj, projImage }) => {
+const ProjectDetails: React.ForwardRefExoticComponent<Ref & Props> = forwardRef(({ proj, projImage }, ref) => {
+    // const { proj, projImage } = props;
     const projLinks = () => {
         if (Object.values(proj.links).length > 1) {
             return (
@@ -59,7 +62,7 @@ export const ProjectDetails: React.FC<Props> = ({ proj, projImage }) => {
     return (
         <StyledProject className="project-details" style={{ backgroundImage: `url(${projImage})` }}>
             <div className="proj-wrapper">
-                <h3>{proj.title}</h3>
+                <h3 ref={ref} tabIndex={-1} onFocus={() => console.log('focused the proj')}>{proj.title}</h3>
                 <fieldset>
                     <legend>Description</legend>
                     <p className="proj-description">{proj.description}</p>
@@ -77,4 +80,7 @@ export const ProjectDetails: React.FC<Props> = ({ proj, projImage }) => {
             </div>
         </StyledProject>
     );
-};
+});
+
+ProjectDetails.displayName = 'ProjectDetails';
+export default ProjectDetails;

@@ -10,7 +10,8 @@
                 "links": {
                     "github": "https://github.com/CoderCarl1/KeyLord"
                 },
-                "bground": "./Keylord.jpg"
+                "bground": "./Keylord.jpg",
+                "active": false
             }
         ]
     },
@@ -18,7 +19,7 @@
         "techLabel": "React",
         "details": [
             {
-                "id": 0,
+                "id": 1,
                 "title": "Headspace Clone",
                 "description": "A meditation site built with the MERN stack. Built with 2 other developers",
                 "tech": ["MongoDB", "React", "Redux", "Express", "Node", "Authentication", "Stripe payments", "Jest for testing", "Git"],
@@ -26,10 +27,11 @@
                     "github": "https://github.com/CoderCarl1/studious-fortnight",
                     "site": "https://meditation-chill.herokuapp.com/"
                 },
-                "bground": "./MeditationAppBGround.png"
+                "bground": "./MeditationAppBGround.png",
+                "active": false
             },
             {
-                "id": 1,
+                "id": 2,
                 "title": "Music Player",
                 "description": "A Music Player that receives an audio object from an API call.",
                 "tech": ["React", "SCSS", "fontawesome"],
@@ -37,7 +39,8 @@
                     "github": "https://github.com/CoderCarl1/MusicPlayer",
                     "site": "https://musicplayer-cc.netlify.app/"
                 },
-                "bground": ""
+                "bground": "",
+                "active": false
             }
         ]
     },
@@ -45,7 +48,7 @@
         "techLabel": "Rails",
         "details": [
             {
-                "id": 0,
+                "id": 3,
                 "title": "Tat2 Marketplace",
                 "description": "A 2 way marketplace built with Ruby on Rails.",
                 "tech": ["Authentication", "Validation", "Stripe payments", "PostgreSQL", "SCSS", "Git"],
@@ -53,7 +56,8 @@
                     "github": "https://github.com/CoderCarl1/T2A2-Rails-Marketplace",
                     "site": "https://tat2-market.herokuapp.com/"
                 },
-                "bground": ""
+                "bground": "",
+                "active": false
             }
         ]
     },
@@ -61,7 +65,7 @@
         "techLabel": "JS",
         "details": [
             {
-                "id": 0,
+                "id": 4,
                 "title": "Mew Mew Kitty",
                 "description": "A challenge written to help students cement their knowledge of DOM manipulation, event listeners, and to introduce parseInt. </br> Images created in Figma",
                 "tech": ["JS", "HTML", "CSS", "Figma"],
@@ -69,7 +73,8 @@
                     "github": "https://github.com/CoderCarl1/MewMewKitty",
                     "site": "https://mewmewkitty.netlify.app/"
                 },
-                "bground": ""
+                "bground": "",
+                "active": false
             }
         ]
     },
@@ -77,7 +82,7 @@
         "techLabel": "HTML & CSS",
         "details": [
             {
-                "id": 0,
+                "id": 5,
                 "title": "1st Portfolio",
                 "description": "My OG portfolio after learning a little bit of HTML & CSS.",
                 "tech": ["html", "CSS", "Git"],
@@ -85,7 +90,8 @@
                     "github": "https://github.com/CoderCarl1/Portfolio",
                     "site": "https://codercarl1.github.io/Portfolio/"
                 },
-                "bground": ""
+                "bground": "",
+                "active": false
             }
         ]
     }

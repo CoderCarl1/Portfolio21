@@ -54,21 +54,20 @@ export const StyledForm = styled.div`
     }
     .list-closed {
         position: absolute;
-        animation: menu-change 2s ease-out forwards;
+        left: -1000px;
     }
     @keyframes menu-change {
         from {
             left: 0;
         }
         to {
-            left: -1000px;
         }
     }
 
     //class given to UL when clicked
     .list-open {
-        animation: menu-change 2s ease-out forwards;
-        animation-direction: reverse;
+        /* animation: menu-change 2s ease-out forwards;
+        animation-direction: reverse; */
         z-index: 3;
         position: relative;
         overflow-y: scroll;
@@ -85,7 +84,15 @@ export const StyledForm = styled.div`
             }
         }
     }
-
+    //Explanation text for the menu
+    .nav-explanation{
+        margin: 1.2px;
+        padding: 1rem;
+        &:focus{
+            outline: 1.5px solid orange;
+            /* background: pink; */
+        }
+    }
     // level 1 LI
     .projListLabel {
         font-size: 1.2rem;
@@ -113,7 +120,6 @@ export const StyledForm = styled.div`
             border: none;
             width: 100%;
             margin: 0 auto;
-
             height: 100%;
             font-size: 1.2rem;
         }
